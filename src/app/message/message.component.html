@@ -1,0 +1,18 @@
+<ion-item *ngIf="message" [detail]="false">
+    <div slot="start" class="img-icon-equipo" [routerLink]="'/message/' + message.id">
+        <img [src]="message.img" />
+    </div>
+    <ion-label class="ion-text-wrap">
+        <h2>
+            {{ message.name }}
+            <span class="date">
+              <ion-note>
+                <ion-icon name="trash-outline" class="trash-color" (click)="eliminaEquipo(message.id)"></ion-icon>
+              </ion-note>
+            </span>
+        </h2>
+        <p>
+            {{ message.estadio }}
+        </p>
+    </ion-label>
+</ion-item>
